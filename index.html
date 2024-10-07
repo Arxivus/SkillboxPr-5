@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addToCart(elemName) {
+            const cart = document.querySelector('#cart');
+            const bag = document.createElement('li');
+            const item = document.createElement('span');
+            cart.append(bag);
+            bag.append(item);
+            item.textContent = `${elemName}`; 
+            
+        }
+    </script>
+
+    <h1>Каталог товаров</h1>
+    <ul id="product-list">
+        <li>
+            <span>Товар 1</span>
+            <button onclick="addToCart('Товар 1')">Добавить в корзину</button>
+        </li>
+        <li>
+            <span>Товар 2</span>
+            <button onclick="addToCart('Товар 2')">Добавить в корзину</button>
+        </li>
+        <li>
+            <span>Товар 3</span>
+            <button onclick="addToCart('Товар 3')">Добавить в корзину</button>
+        </li>
+    </ul>
+    <h1>Корзина</h1>
+    <ul id="cart">
+
+    </ul>
+</body>
+</html>
